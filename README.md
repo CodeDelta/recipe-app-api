@@ -66,3 +66,13 @@ docker compose run --rm app sh -c "python manage.py createsuperuser"
 # go to localhost:8000/admin try to login with above info
 
 ```
+
+#### Build user api
+
+```
+docker compose rum --rm app sh -c "python manage.py startapp user"
+```
+
+Then remove `migrations`, `admin.py`, `models.py`, `tests.py`.
+Create `tests` folder with `__init__.py`
+Add 'user' inside `app>settings.py>INSTALLED_APPS`.
