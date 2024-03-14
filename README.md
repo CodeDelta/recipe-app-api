@@ -87,3 +87,9 @@ docker compose run --rm app sh -c "python manage.py startapp recipe"
 Then remove `migrations`, `admin.py`, `models.py`, `tests.py`.
 Create `tests` folder with `__init__.py`
 Add 'recipe' inside `app>settings.py>INSTALLED_APPS`.
+
+### After create tag models
+
+```
+docker compose run --rm app sh -c "python manage.py makemigrations"
+```
